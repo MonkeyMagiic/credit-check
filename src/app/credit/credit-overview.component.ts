@@ -39,7 +39,7 @@ export class CreditOverview {
     selector: 'credit-score',
     template: `
         <div style="background-color: purple; border-radius: 50px;">
-            <progress-bar></progress-bar>
+            <progress-bar [value]="state.maxScoreValue" [max]="state.maxScoreValue"></progress-bar>
         </div>`
 })
 export class CreditScore {

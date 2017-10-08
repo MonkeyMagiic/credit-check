@@ -20,11 +20,7 @@ describe('App component:', () => {
             });
     }));
 
-    it('smoke', () => {
+    it('can be created', () => {
         expect(AppComponent).toBeDefined();
-    });
-
-    it('instance', () => {
-        expect(component.title).toBe('App');
     });
 });
