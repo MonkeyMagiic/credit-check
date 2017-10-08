@@ -27,9 +27,7 @@ export class ProgressBar implements OnInit, OnDestroy, OnChanges {
 
         this._subscription = Rx.Observable
             .combineLatest(this._valueUpdates, this._maxUpdates)
-            .map(([value, max]) => {
-                return max / value;
-            })
+            .map(([value, max]) => value/max)
             .mergeScan((position: number, update: number) => {
                 return Rx.Observable.create((observer: Rx.Observer<number>) => {
                     const tween = TweenLite.to({position}, 3,
